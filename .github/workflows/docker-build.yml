@@ -37,6 +37,3 @@ jobs:
           file: ./frontend/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/docker-actions-demo-frontend:${{ github.sha }}
-
-      - name: Write .env with tag
-        run: echo "TAG=${{ github.sha }}" > .env
