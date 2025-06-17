@@ -28,7 +28,7 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/your-backend-image:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/docker-actions-demo-backend:${{ github.sha }}
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
@@ -36,4 +36,4 @@ jobs:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/your-frontend-image:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/docker-actions-demo-frontend:${{ github.sha }}
