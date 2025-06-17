@@ -2,6 +2,7 @@ services:
   backend:
     build:
       context: ./backend
+    image: arioum/docker-actions-demo-backend:${TAG}
     ports:
       - "5000:5000"
     volumes:
@@ -11,6 +12,7 @@ services:
   frontend:
     build:
       context: ./frontend
+    image: arioum/docker-actions-demo-frontend:${TAG}
     ports:
       - "3000:80"
     volumes:
